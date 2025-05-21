@@ -1,23 +1,31 @@
+#
+# Выполнил: Машук Ю.Н.
+# Группа: МС-32
+
 import math
+
+def sgn(x):
+    
+    if x > 0:
+        return 1
+    elif x == 0:
+        return 0
+    else:
+        return -1
+
+    # Удалите комментарий и допишите код
 
 x = int(input("Enter the number x "))
 y = int(input("Enter the number y "))
 
-# Функция для вычисления sgn(a)
-def sgn(a):
-
-    if a > 0:
-        return 1
-    elif a < 0:
-        return -1
-    else:
-        return 0
-
 # Вычисление выражения
 z = sgn(x) + (y**2) / (sgn(y) - math.sqrt(abs(x)))
 
-# Проверка деления на ноль
-if sgn(y) - math.sqrt(abs(x)) == 0:
-    print("Ошибка: деление на ноль!")
-else:
-    print(f"Результат: {z}")
+print("Ответ:", z)
+
+# --------------
+# Пример вывода:
+#
+# Введите x: -9
+# Введите y: 0
+# Ответ: 0.33
