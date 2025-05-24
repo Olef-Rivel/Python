@@ -62,7 +62,7 @@ for category in category_links:
 print("\n Найденные товары:")
 for product in products:
     print(product)
-    print(f"Кличество товаров: {len(products)}")
+print(f"Кличество товаров: {len(products)}")
 
 
 with open('products_onliner.json', 'w', encoding='utf-8') as f: #записать
