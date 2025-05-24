@@ -4,12 +4,12 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import os
 
-# 🔹 URL файла
+#  URL файла
 file_url = "https://github.com/fixedsergey/datasets/raw/main/Cancer%20Deaths%20by%20Country%20and%20Type%20Dataset.zip"
 zip_path = "cancer_data.zip"
 extract_path = "cancer_data"
 
-# 🔹 Проверка доступности файла
+#  Проверка доступности файла
 def check_file_availability(url):
     try:
         response = requests.head(url, allow_redirects=True)
@@ -23,7 +23,7 @@ def check_file_availability(url):
         print(f"Ошибка при проверке файла: {e}")
         return False
 
-# 🔹 Скачивание и разархивирование
+#  Скачивание и разархивирование
 def download_and_extract(url, zip_path, extract_path):
     response = requests.get(url, stream=True)
     with open(zip_path, "wb") as file:
@@ -34,11 +34,11 @@ def download_and_extract(url, zip_path, extract_path):
         zip_ref.extractall(extract_path)
     print("Файл разархивирован!")
 
-# 🔹 Чтение данных и построение графика
+#  Чтение данных и построение графика
 def plot_cancer_data(file_path):
     df = pd.read_csv(file_path)  # Укажи правильное имя файла
 
-    # 🔹 Выведем названия всех столбцов
+    #  Выведем названия всех столбцов
     print(df.columns)
     df.columns = df.columns.str.strip()  # Убираем пробелы в названиях столбцов
 
@@ -57,7 +57,7 @@ def plot_cancer_data(file_path):
     plt.grid(True)
     plt.show()
 
-# 🔹 Запуск
+#  Запуск
 if check_file_availability(file_url):
     download_and_extract(file_url, zip_path, extract_path)
     csv_file = os.path.join(extract_path, "Cancer Deaths by Country and Type Dataset.csv")  # Укажи правильное имя файла
