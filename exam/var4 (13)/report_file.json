@@ -1,0 +1,36 @@
+{
+    "requests_per_ip": {
+        "192.168.1.101": 4,
+        "10.0.0.5": 2,
+        "172.16.0.30": 2,
+        "203.0.113.45": 1,
+        "198.51.100.12": 1
+    },
+    "top_5_resources": {
+        "/index.html": 3,
+        "/api/submit": 1,
+        "/style.css": 1,
+        "/nonexistent.jpg": 1,
+        "/images/logo.png": 1
+    },
+    "requests_per_method": {
+        "GET": 8,
+        "POST": 2
+    },
+    "requests_per_status": {
+        "200": 7,
+        "201": 1,
+        "404": 1,
+        "401": 1
+    },
+    "total_data_transferred_success": 14370,
+    "top_5_resources_by_data": {
+        "/index.html": 4629,
+        "/images/logo.png": 4520,
+        "/scripts/app.js": 3321,
+        "/api/data": 1024,
+        "/style.css": 876
+    },
+    "avg_successful_response_size": 2052.8571428571427,
+    "top_ip_by_data": "192.168.1.101"
+}
